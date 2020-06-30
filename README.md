@@ -2,7 +2,7 @@
 
 ### What is FLOP?
 
-The Free List of Open Problems (FLOP) is a public list of unsolved or unexplored problems/conjectures/ideas in the field of free analysis. The items in the list should provide some background in the problem, perhaps some ideas of what might work or what doesn't work, and references to related material. If an open problem is solved, then a link to the solution should be provided and connections to other problems or generalizations can be added.
+The **F**ree **L**ist of **O**pen **P**roblems (FLOP) is a public list of unsolved or unexplored problems/conjectures/ideas in the field of free analysis. The items in the list should provide some background in the problem, perhaps some ideas of what might work or what doesn't work, and references to related material. If an open problem is solved, then a link to the solution should be provided and connections to other problems or generalizations can be added.
 
 
 ### Why FLOP?
