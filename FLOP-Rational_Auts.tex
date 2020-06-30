@@ -1,0 +1,110 @@
+
+\begin{problem}
+	Suppose $\bbr\in (\C\skf{x_1,\dots, x_\ttg})^\ttg$. Find an evaluation criterion that is necessary and sufficient for the induced map $\rho:\C\skf{x_1,\dots, x_\ttg}\to\C\skf{x_1,\dots, x_\ttg}$ ($\rho(x_i) = \bbr_i$) to be an automorphism.
+\end{problem}
+
+An evaluation criterion is some condition on $\bbr$ when we treat it as a function.
+For example, injective, surjective, etc.
+
+\begin{conjecture}
+	Suppose $\bbr\in (\C\skf{x_1,\dots, x_\ttg})^\ttg$.
+	The following are equivalent:
+	\begin{enumerate}
+		\item there exists a free, Euclidean open and Euclidean dense set $\Omega$ such that $\bbr\lvert_\Omega$ is injective;
+		\item $J_\bbr$ is an invertible element of $M_\ttg(\C\skf{\bbx'}^{opp}\otimes \C\skf{\bbx})$;
+		\item the induced map $\rho:\C\skf{\bbx}\to \C\skf{\bbx}$ given by $\rho(x_i) = \bbr_i$ is an automorphism.
+	\end{enumerate}
+\end{conjecture}
+
+
+This is simply a best guess conjecture at the moment. Clearly, $(3)\Rightarrow (1),(2)$.
+Condition $(1)$ is seemingly strange, but the na{\"i}ve attempt of requiring injective on its domain is insufficient.
+
+\begin{example}
+	Let $\bbr(x,y) = (x, y - x^2y)$.
+	This induces a rational automorphism, however $\bbr(1,\alpha) = \bbr(1,\beta)$, hence $\bbr$ is not injective on its domain (in fact, the points where it is not injective are exactly the points where $\bbr^{-1}$ is not defined).
+	If $\Omega = \set{(X,Y)\in M_n(\C)^2 \, : \, \det(I_n - X^2)\neq 0}$, then $\Omega$ is free, Euclidean open and dense and $\bbr$ is injective on $\Omega$.
+\end{example}
+
+Let us see a slightly harder example.
+
+\begin{example}
+	Let $\bbr(x,y) = (x, y - xyx)$.
+	Naturally $\bbr$ is not injective on $\C^2$ since $\bbr(1,\alpha) = \bbr(1,\beta)$.
+	However, $\bbr$ does not induce a rational automorphism and this fact is a bit harder to see.
+	
+	The first observed reason why is found by using formal power series.
+	Since the derivative of $\bbr$ is invertible on some free neighborhood of $0$, it must have a local inverse that we can find as a power series.
+	It turns out that
+	\[
+		f(x,y) = (x, \sum_{n=0}^\infty x^nyx^n)
+	\]
+	is the formal power series representation of $\bbr^{-1}$.
+	If one tries to write down a realization for $f$, then a contradiction is eventually attained showing that $f$ is not a rational power series.
+	Thus, $\bbr$ does not induce a rational automorphism.
+	This doesn't give us too much information at the moment, since it reveals little about the injectivity of $\bbr$.
+	
+	Our alternative approach is to use the idea behind the conception of hyporationals: the matrix identity $\vecc(AXB) = \vecc(X)(A^T\otimes B)$.
+	Let $f = (\bbr^{-1})_2$.
+	Since $f(x,y)$ is satisfies the equation $f(x,y) = y + xf(x,y)x$, we evaluate on a pair of matrices $(X,Y)$ (when it makes sense) and note we have
+	\[
+		f(X,Y) = Y + Xf(X,Y)X.
+	\]
+	Taking the vectorization of both sides and rearranging, we have
+	\[
+		\vecc(f(X,Y))(I_n\otimes I_n - X^T\otimes X) = \vecc(I_n)(I_n\otimes Y).
+	\]
+	Multiplying on the right by an inverse we see
+	\[
+		\vecc(f(X,Y)) = \vecc(I_n)(I_n\otimes Y)\left(I_n\otimes I_n - X^T\otimes X\right)^{-1}.
+	\]
+	Thus, for any matrix $X$ where $(I_n\otimes I_n - X^T\otimes X)$ is invertible we have $(X,Y)$ is in the domain of $\bbr^{-1}$.
+	As pointed out in \ref{sec:TPFSF}, the function $(1\otimes 1-x'\otimes x)^{-1}\notin \C\skf{x'}\otimes \C\skf{x}$.
+	However, a consequence of its (first) proof is that there is no free Euclidean open and Euclidean dense set upon which $(1\otimes 1-x'\otimes x)$ is invertible.
+	Thus, $\bbr$ fails to satisfy requirement $(1)$ from the Conjecture and $\bbr$ does not induce a rational automorphism.
+	
+	To see why $q = (1\otimes 1-x'\otimes x)$ fails to be injective on a ``big" set, suppose $\Omega$ is any nonempty free open set upon which $q$ is invertible.
+	If $\lambda$ and $\mu$ are any eigenvalues of $X$ then $\lambda\mu$ is an eigenvalue of $X^T\otimes X$ and $1-\lambda\mu$ is an eigenvalue of $q(X^T,X)$.
+	Hence, if $X\in \Omega$, then for each eigenvalue $\lambda$ of $X$, $\lambda^{-1}$ is not an eigenvalue of any matrix in $\Omega$.
+	Thus, the eigenvalues of $q(X^T,X)$, taken over all $X\in \Omega$ partition the complex plane.
+	However, since $\Omega$ is an open set, the eigenvalues of $q$ must contain open sets.
+	Thus, the eigenvalues of $q$ must miss an open set of $\C$, therefore $\Omega$ cannot be dense since a nonconstant element of $\C\skf{x'}\otimes \C\skf{x}$ must have dense eigenvalues on a dense set.
+\end{example}
+
+
+
+
+
+%\begingroup
+%\renewcommand{\addcontentsline}[3]{}% Remove functionality of \addcontentsline
+%\renewcommand{\section}[2]{}% Remove functionality of \section
+%
+%\vspace{1em}
+%
+%\begin{center}
+%	{\normalsize \textsc{References}}
+%\end{center}
+%
+%
+%\begin{thebibliography}{Swe70}
+%
+%%\bibitem[Coh06]{Cohn06}
+%%P.M. Cohn.
+%%\newblock {\em Free Ideal Ring and Localizations in General Rings}.
+%%\newblock Cambridge University Press, 2006.
+%%
+%%\bibitem[PW95]{PW95}
+%%H.J. Park and C.~Woodburn.
+%%\newblock An algorithmic proof of {S}uslin's stability theorem for polynomial
+%%  rings.
+%%\newblock {\em Journal of Algebra}, 178(1):277 -- 298, 1995.
+%
+%\bibitem[Swe70]{Swe70}
+%Moss~Eisenberg Sweedler.
+%\newblock A units theorem applied to hopf algebras and amitsur cohomology.
+%\newblock {\em American Journal of Mathematics}, 92(1):259--271, 1970.
+%
+%\end{thebibliography}
+%
+%
+%\endgroup
