@@ -7,65 +7,65 @@
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{prop}[theorem]{Proposition}
 \newtheorem{question}{Question}
-\newtheorem{claim}{Claim}%[theorem]
+\newtheorem{claim}{Claim}
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{conjecture}[theorem]{Conjecture}
 \newtheorem{guess}[theorem]{Guess}
 \newtheorem{problem}[theorem]{Problem}
-%\newnumbered{conjecture}{Conjecture}%[theorem]
+
 \newtheorem{remark}[theorem]{Remark}
-%\newnumbered{example}[theorem]{Example}
-%\theoremstyle{remark}
-%\newtheorem{rem}[theorem]{Remark}
-%\theoremstyle{remark}
-%\newtheorem{remark}[theorem]{Remark}
+
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{Example}
-%\theoremstyle{definition}
-%\newnumbered{examplex}{Example}[theorem]
-%\newenvironment{example}
-%  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\Diamond$}\examplex}
-%  {\popQED\endexamplex}
-%%\theoremstyle{definition}
-%\newnumbered{remarkx}{Remark}[theorem]
-%\newenvironment{remark}
-%{\pushQED{\qed}\renewcommand{\qedsymbol}{$\Diamond$}\remarkx}
-%{\popQED\endremarkx}
 
-%\newtheorem*{rem*}{Remark}
-%\newtheorem*{theorem*}{Theorem}
-%\newtheorem*{claim*}{Claim}
-%\newtheorem*{proposition*}{Proposition}
-%\newtheorem*{definition*}{Definition}
-%\newtheorem*{lemma*}{Lemma}
+
+
 \newtheorem{fact*}{Fact}
-%\newtheorem*{question*}{Question}
+
 \newtheorem{note}[theorem]{Note}
 
 
 
 
-% MATH -------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ASSORTED
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \DeclareMathOperator{\RE}{Re}
 \DeclareMathOperator{\IM}{Im}
 \DeclareMathOperator{\intr}{int}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\dom}{dom}
 \DeclareMathOperator{\diag}{diag}
-\DeclareMathOperator\re{\mathrm {Re~}}
-\DeclareMathOperator\im{\mathrm {Im~}}
+\DeclareMathOperator{\re}{\mathrm {Re~}}
+\DeclareMathOperator{\im}{\mathrm {Im~}}
 \DeclareMathOperator{\rg}{range}
-\newcommand{\NP}[1]{\mathrm{NP}(#1)}
-\newcommand{\ANP}[1]{\mathrm{ANP}(#1)}
 \newcommand{\finv}[1]{{#1}^{\bm{\dagger}/2}}
 \newcommand{\alg}{\mathrm{alg}}
 \DeclareMathOperator\vecc{{\bf vec}}
 \DeclareMathOperator\verr{{\bf ver}}
 \DeclareMathOperator\id{{id}}
-%\newcommand\half{\tfrac{1}{2}}
 \newcommand\half{1\hspace{-0.1em}/\hspace{-0.08em}2}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	GREEK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\vp}{\varphi}
+\newcommand{\ph}{\varphi}
 \newcommand{\eps}{\varepsilon}
+\newcommand\al{\alpha}
+\newcommand\ga{\gamma}
+\newcommand\de{\delta}
+\newcommand\ep{\varepsilon}
+\newcommand\La{\Lambda}
+\newcommand\la{\lambda}
+\newcommand\up{\upsilon}
+\newcommand\si{\sigma}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -73,7 +73,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\A}{\mathcal{A}}
 \newcommand{\B}{\mathcal{B}}
-\newcommand{\vecspace}{\mathcal{V}}
 \newcommand{\J}{\mathcal{J}}
 \newcommand{\M}{\mathcal{M}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -81,22 +80,39 @@
 \newcommand{\T}{\mathbb{T}}
 \newcommand{\W}{\mathcal{W}}
 \newcommand{\X}{\mathcal{X}}
-\newcommand{\cC}{\mathcal{C}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cK}{\mathcal{K}}
 \newcommand{\cA}{\mathcal{A}}
-\newcommand{\cE}{\mathcal{E}}
-\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cC}{\mathcal{C}}
 \newcommand{\cD}{\mathcal{D}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cO}{\mathcal{O}}
 \newcommand{\cP}{\mathcal{P}}
 \newcommand{\cQ}{\mathcal{Q}}
 \newcommand{\cR}{\mathcal{R}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cT}{\mathcal{T}}
+\newcommand{\cU}{\mathcal{U}}
 \newcommand{\cV}{\mathcal{V}}
+\newcommand{\cW}{\mathcal{W}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cZ}{\mathcal{Z}}
+
 \newcommand{\Polar}{\mathcal{P}_{\s}}
 \newcommand{\Poly}{\mathcal{P}(E)}
 \newcommand{\Lop}{\mathcal{L}}
 \newcommand\RR{\mathcal{R}}
 \newcommand\BH{B(\mathcal{H})}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	MATHBB
@@ -106,6 +122,8 @@
 \newcommand{\D}{\mathbb{D}}
 \newcommand{\Field}{\mathbb{F}}
 \newcommand{\bbG}{\mathbbm{G}}
+\newcommand{\bbF}{\mathbbm{F}}
+\newcommand{\bbH}{\mathbbm{H}}
 \newcommand{\K}{\mathbb{K}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\RPlus}{\Real^{+}}
@@ -120,12 +138,16 @@
 \newcommand{\bbq}{\reflectbox{$\mathbbm{p}$}}
 \newcommand{\bbr}{\mathbbm{r}}
 \newcommand{\bbs}{\mathbbm{s}}
+\newcommand{\bbt}{\mathbbm{t}}
 \newcommand{\bbu}{\mathbbm{u}}
 \newcommand{\bbv}{\mathbbm{v}}
 \newcommand{\bbw}{\mathbbm{w}}
 \newcommand{\bbx}{\mathbbm{x}}
 \newcommand{\bby}{\mathbbm{y}}
 \newcommand{\bbz}{\mathbbm{z}}
+\newcommand{\bbh}{\mathbbm{h}}
+\newcommand{\bbk}{\mathbbm{k}}
+
 
 
 
@@ -154,10 +176,14 @@
 \newcommand{\x}{\bm{x}}
 \newcommand{\y}{\bm{y}}
 \newcommand{\z}{\bm{z}}
-\newcommand{\h}{\bm{h}}
+\newcommand{\uu}{\bm{u}}
+\newcommand{\vv}{\bm{v}}
 \newcommand{\w}{\bm{w}}
-\renewcommand{\u}{\bm{u}}
 \newcommand{\s}{\bm{s}}
+\renewcommand{\t}{\bm{t}}
+\newcommand{\h}{\bm{h}}
+\renewcommand{\k}{\bm{k}}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -165,6 +191,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\GM}{\textup{GM}}
 \newcommand{\UD}{\textup{UD}}
+\newcommand{\GL}{\textup{GL}}
 \newcommand{\Aut}[1]{\textup{Aut}(#1)}
 
 
@@ -178,19 +205,7 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%	GREEK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\vp}{\varphi}
-\newcommand{\ph}{\varphi}
-\newcommand\al{\alpha}
-\newcommand\ga{\gamma}
-\newcommand\de{\delta}
-\newcommand\ep{\varepsilon}
-\newcommand\La{\Lambda}
-\newcommand\la{\lambda}
-\newcommand\up{\upsilon}
-\newcommand\si{\sigma}
+
 
 
 
@@ -253,11 +268,15 @@
 %	MATRICES, ARRAYS, PIECEWISE AND ALIGNS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\bbm}{\left[ \begin{smallmatrix}}
-\newcommand{\ebm}{\end{smallmatrix} \right]}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
 
 \newcommand{\bpm}{\begin{pmatrix}}
 \newcommand{\epm}{\end{pmatrix}}
+
+\newcommand{\bsm}{\begin{smallmatrix}}
+\newcommand{\esm}{\end{smallmatrix}}
+
 \newcommand{\bal}{\begin{align*}}
 \newcommand{\eal}{\end{align*}}
 

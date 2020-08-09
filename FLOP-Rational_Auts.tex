@@ -7,6 +7,7 @@ An evaluation criterion is some condition on $\bbr$ when we treat it as a functi
 For example, injective, surjective, etc.
 
 \begin{conjecture}
+	\label{conj:rats auts conj}
 	Suppose $\bbr\in (\C\skf{x_1,\dots, x_\ttg})^\ttg$.
 	The following are equivalent:
 	\begin{enumerate}
@@ -31,7 +32,7 @@ Let us see a slightly harder example.
 \begin{example}
 	Let $\bbr(x,y) = (x, y - xyx)$.
 	Naturally $\bbr$ is not injective on $\C^2$ since $\bbr(1,\alpha) = \bbr(1,\beta)$.
-	However, $\bbr$ does not induce a rational automorphism and this fact is a bit harder to see.
+	Moreover, $\bbr$ does not induce a rational automorphism and this fact is a bit harder to see.
 	
 	The first observed reason why is found by using formal power series.
 	Since the derivative of $\bbr$ is invertible on some free neighborhood of $0$, it must have a local inverse that we can find as a power series.
@@ -46,7 +47,7 @@ Let us see a slightly harder example.
 	
 	Our alternative approach is to use the idea behind the conception of hyporationals: the matrix identity $\vecc(AXB) = \vecc(X)(A^T\otimes B)$.
 	Let $f = (\bbr^{-1})_2$.
-	Since $f(x,y)$ is satisfies the equation $f(x,y) = y + xf(x,y)x$, we evaluate on a pair of matrices $(X,Y)$ (when it makes sense) and note we have
+	Since $f(x,y)$ satisfies the equation $f(x,y) = y + xf(x,y)x$, we evaluate on a pair of matrices $(X,Y)$ (when it makes sense) and note we have
 	\[
 		f(X,Y) = Y + Xf(X,Y)X.
 	\]
@@ -67,9 +68,20 @@ Let us see a slightly harder example.
 	If $\lambda$ and $\mu$ are any eigenvalues of $X$ then $\lambda\mu$ is an eigenvalue of $X^T\otimes X$ and $1-\lambda\mu$ is an eigenvalue of $q(X^T,X)$.
 	Hence, if $X\in \Omega$, then for each eigenvalue $\lambda$ of $X$, $\lambda^{-1}$ is not an eigenvalue of any matrix in $\Omega$.
 	Thus, the eigenvalues of $q(X^T,X)$, taken over all $X\in \Omega$ partition the complex plane.
-	However, since $\Omega$ is an open set, the eigenvalues of $q$ must contain open sets.
-	Thus, the eigenvalues of $q$ must miss an open set of $\C$, therefore $\Omega$ cannot be dense since a nonconstant element of $\C\skf{x'}\otimes \C\skf{x}$ must have dense eigenvalues on a dense set.
+	
+	For any $X\in M_n(\C)$ let $\sigma(X)$ denote its set of eigenvalues and for any $U\subset M_n(\C)$ let $\sigma(U) = \cup_{X\in U} \sigma(X)$.
+	Since $\Omega$ is assumed to open, $\Omega[n]$ is open and $\sigma(\Omega[n])$ must contain an open set.
+	Hence, if $\lambda\in \sigma(\Omega[n])$ is nonzero, then there exists an open set $W$ containing $\lambda^{-1}$ such that $W\cap \sigma(\Omega[n]) = \varnothing$.
+	
+	However, $\sigma^{-1}(W)$ contains an open set of matrices, thus $\Omega$ cannot be free, open and dense.	
 \end{example}
+
+
+Condition $(1)$ is currently a best guess (the density was used to invoke complex analytic methods).
+Understanding the domains of elements of $\C\skf{\bbx'\lra \bbx}$ seems to be quite important.
+
+
+
 
 
 

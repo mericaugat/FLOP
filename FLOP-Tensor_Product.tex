@@ -4,7 +4,7 @@
 	The expectation is that if $Q$ and $Q^{-1}$ are in $\C\skf{\bbx}\otimes \C\skf{\bby}$, then $Q = r\otimes s$, for some nonzero elements $r\in \C\skf{\bbx}$ and $s\in \C\skf{\bby}$.
 \end{problem}
 
-The following was proven in \cite{Swe70} using techniques that seemingly don't translate well to the noncommutative setting.
+The following was proven in \cite{TensorProd-Swe70} using techniques that seemingly don't translate well to the noncommutative setting.
 
 \begin{theorem}
 	Suppose $A$ and $B$ are commutative domains over an algebraically closed field $\k$ and $\k$ is algebraically closed in $A$ and $B$. If $z\in A\otimes B$ is invertible, then $z = a\otimes b$ for some invertible elements $a\in A$ and $b\in B$.
@@ -16,12 +16,10 @@ The following two simplifications have been proven using Complex Analysis and Re
 	Suppose $r\in \C\skf{\bbx}$ and $s\in \C\skf{\bby}$.
 	If $(1\otimes 1 - r\otimes s)^{-1}\in \C\skf{\bbx}\otimes \C\skf{\bby}$ then either $r$ or $s$ is constant.
 	
-	Suppose $\ttg\geq k$ and $r_1,\dots, r_k\in \C\skf{\bbx}$. If $(1\otimes 1 - \sum_{i=1}^k r_i\otimes y_i)^{-1}\in \C\skf{\bbx}\otimes \C\skf{\bby}$ then $r_1,\dots, r_k$ are all constant.
+	Suppose $r_1,\dots, r_\tth\in \C\skf{\bbx}$, $C\skf{s_1\dots, s_\tth}$ is isomorphic as a skew field to $\C\skf{w_1,\dots, w_\tth}$.
+	If $(1\otimes 1 - \sum_{i=1}^k r_i\otimes s_i)^{-1}\in \C\skf{\bbx}\otimes \C\skf{\bby}$ then $r_1,\dots, r_k$ are all constant.
 \end{proposition}
 
-
-Although this is progress, in general an element of $\C\skf{\bbx\lra \bby}$ will not have inversion height $1$.
-So additional ideas or techniques must be developed to answer the other cases.
 
 The tensor product membership problem is strongly related to the rational automorphism problem as well, although that may require an understanding of domains.
 
@@ -53,9 +51,9 @@ The tensor product membership problem is strongly related to the rational automo
 %  rings.
 %\newblock {\em Journal of Algebra}, 178(1):277 -- 298, 1995.
 
-\bibitem[Swe70]{Swe70}
+\bibitem[Swe70]{TensorProd-Swe70}
 Moss~Eisenberg Sweedler.
-\newblock A units theorem applied to hopf algebras and amitsur cohomology.
+\newblock A units theorem applied to {H}opf algebras and {A}mitsur cohomology.
 \newblock {\em American Journal of Mathematics}, 92(1):259--271, 1970.
 
 \end{thebibliography}

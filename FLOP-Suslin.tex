@@ -1,19 +1,19 @@
 
 \begin{problem}
-	Suppose $A\in M_n(\C\fralg{\bbx}\otimes \C\fralg{\bby})$. If $A$ is invertible over the $\C$-algebra $\C\fralg{\bbx}\otimes \C\fralg{\bby}$ then do there exist $D,E_1,\dots, E_k\in M_n(\C\fralg{\bbx}\otimes \C\fralg{\bby})$ such that $D$ is diagonal, each $E_i$ is an elementary matrix and $A = DE_1\dots E_k$?
+	Suppose $A\in M_n(\C\fralg{\bbx}\otimes \C\fralg{\bby})$. If $A$ is invertible over the $\C$-algebra $\C\fralg{\bbx}\otimes \C\fralg{\bby}$ then do there exist $D\in M_n(\C)$ and $E_1,\dots, E_k\in M_n(\C\fralg{\bbx}\otimes \C\fralg{\bby})$ such that $D$ is diagonal, each $E_i$ is an elementary matrix and $A = DE_1\dots E_k$?
 \end{problem}
 
 \begin{remark}
-	The above problem is false when $n=2$. Cohn gave the following matrix that is not a product of elementary matrices over $\C[x]\otimes \C[y]$:
+	This problem is false when $n=2$. Cohn gave the following matrix that is not a product of elementary matrices over $\C[x]\otimes \C[y]$:
 	\[
 		\bpm 1\otimes 1 + x\otimes y & 1\otimes y^2 \\ -x^2\otimes 1 & 1\otimes 1 - x\otimes y \epm.
 	\]
 \end{remark}
 
-The above counterexample is nonexistent when our matrices are over $\C\fralg{\bbx}$ instead. The proof of this uses results from \cite{SuslinCohn06}.
+The above counterexample is nonexistent when our matrices are over $\C\fralg{\bbx}$ instead of $\C\fralg{\bbx}\otimes \C\fralg{\bby}$. The proof of this uses results from \cite{Suslin-Cohn06}.
 
 \begin{theorem}
-	If $A\in M_n(\C\fralg{\bbx})$ is invertible, then there exist $D,E_1,\dots, E_k\in M_n(\C\fralg{\bbx})$ such that $D$ is diagonal, each $E_i$ is an elementary matrix and $A = DE_1\dots E_k$.
+	If $A\in M_n(\C\fralg{\bbx})$ is invertible, then there exist $D\in M_n(\C)$ and $E_1,\dots, E_k\in M_n(\C\fralg{\bbx})$ such that $D$ is diagonal, each $E_i$ is an elementary matrix and $A = DE_1\dots E_k$.
 \end{theorem}
 
 The Cohn counterexample is essentially the only issue:
@@ -22,7 +22,7 @@ The Cohn counterexample is essentially the only issue:
 	Suppose $A\in M_n(\C[t_1,\dots, t_\ttg])$ where $n\geq 3$. If $\det(A) = 1$ then there exist $E_1,\dots, E_k\in M_n(\C[t_1,\dots, t_\ttg])$ such that $A = E_1\dots E_k$.
 \end{theorem}
 
-An ``algorithmic" proof of the above theorem can be found in \cite{SuslinPW95}.
+An ``algorithmic" proof of the above theorem can be found in \cite{Suslin-PW95}.
 
 
 \begin{remark}
@@ -43,12 +43,12 @@ An ``algorithmic" proof of the above theorem can be found in \cite{SuslinPW95}.
 
 \begin{thebibliography}{PW95}
 
-\bibitem[Coh06]{SuslinCohn06}
+\bibitem[Coh06]{Suslin-Cohn06}
 P.M. Cohn.
 \newblock {\em Free Ideal Ring and Localizations in General Rings}.
 \newblock Cambridge University Press, 2006.
 
-\bibitem[PW95]{SuslinPW95}
+\bibitem[PW95]{Suslin-PW95}
 H.J. Park and C.~Woodburn.
 \newblock An algorithmic proof of {S}uslin's stability theorem for polynomial
   rings.
