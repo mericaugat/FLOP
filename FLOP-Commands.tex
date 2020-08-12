@@ -27,6 +27,12 @@
 
 
 
+%\makeatletter
+%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%\makeatother
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	ASSORTED
@@ -256,9 +262,9 @@
 
 
 
-\newcommand\blue{\color{blue}}
-\newcommand\black{\color{black}}
-\newcommand\red{\color{red}}
+\newcommand\blue{\xcolor{blue}}
+\newcommand\black{\xcolor{black}}
+\newcommand\red{\xcolor{red}}
 
 \newcommand\nn{\nonumber}
 
