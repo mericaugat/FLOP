@@ -1,0 +1,328 @@
+
+
+The following questions are due to Eric Evert (eric.evert@kuleuven.be) and Bill Helton (helton@math.ucsd.edu).
+%\author[E. Evert]{Eric Evert${}^1$}
+%\address{Eric Evert, Department of Mathematics\\
+%  University of California \\
+%  San Diego
+%   }
+%   \email{eevert@ucsd.edu}
+%\thanks{${}^1$Research supported by the NSF grant
+%DMS-1500835}
+%\author[J.W. Helton]{J. William Helton${}^1$}
+%\address{J. William Helton, Department of Mathematics\\
+%  University of California \\
+%  San Diego
+%   }
+%   \email{helton@math.ucsd.edu}
+
+
+\section{Brief definitions}
+
+We begin with basic definitions. Readers familiar with matrix convex sets and their extreme points may proceed directly to Section 
+\ref{sec:MatExtreme}.
+
+We warn that these questions and all claims regarding free spectrahedra restrict to the setting of real free spectrahedra. There can be 
+important differences for free spectrahedra which contain tuples of complex self-adjoint matrices. 
+
+\subsection{Free spectrahedra and matrix convex sets}
+
+Let $SM_n (\R) ^g$ denote $g$-tuples of symmetric $n \times n$ matrices, and set $SM (\R)^g := \cup_n SM_n (\R)^g$. The following questions 
+concern \textit{free spectrahedra}, i.e. solution sets to \textit{linear matrix inequalities}. Given a $g$-tuple $A \in SM_d (\R)^g$, a 
+\df{linear matrix inequality} is an inequality of the form 
+\[
+L_A (x) = I + A_1 x_1 + \dots + A_g x_g \succeq 0.
+\]
+The map $L_A$ is called a \df{monic linear pencil}. For a matrix tuple $X = (X_1, \dots, X_g) \in SM(\R)^g$, the \df{evaluation} of $L_A$ on 
+$X$ is 
+\[
+L_A (X) = I + A_1 \otimes X_1 + \dots + A_g \otimes X_g. 
+\]
+Here $\otimes$ denotes the Kronecker product. A \df{free spectrahedron} $\cD_A$ is the solution set 
+\[
+\cD_A = \{ X \in SM (\R)^g : L_A (X) \succeq 0 \}.
+\]
+We emphasize that a free spectrahedron contains matrix tuples of all sizes. We let $\cD_A (n)$ denote the set collection of $g$-tuples of $n 
+\times n$ matrices in $\cD_A$. We say a free spectrahedron is \df{compact} if $\cD_A (n)$ is compact for each $n$.
+
+Free spectrahedra are prototypical examples of \textit{matrix convex sets}. A \df{matrix convex combination} of a collection of tuples 
+$\{Y^i\} \in SM(\R)^g$ is a finite sum of the form 
+\beq
+\label{eq:SumY}
+\sum_{i=1}^k V_i^T Y^i V_i \qquad \mathrm{where} \qquad \sum_{i=1}^k V_i^T V_i = I_n.
+\eeq
+Here each $Y^i=(Y_1^i, \dots, Y_g^i)$ is a $g$-tuple of $n_i \times n_i$ matrices and the $V_i$ are $n_i \times n$ contractions. The product 
+$V_i^T Y^i V_i$ is defined by 
+\[
+V_i^T Y^i V_i = (V_i^T Y_1^i V_i, \dots, V_i^T Y_1^i V_i).
+\]
+A matrix convex combination is said to be \df{proper} if each $V_i$ is surjective or \df{weakly proper} if $V_i \neq 0$ for each $i$. 
+
+An important aspect of matrix convex combinations is that the $n_i$ need not be equal. I.e. the $Y^i$ may be tuples of matrices of different 
+sizes. A set is called \df{matrix convex} if it is closed under matrix convex combinations. All free spectrahedra are matrix convex and every 
+matrix convex set can be represented as a (perhaps infinite) intersection of free spectrahedra. 
+
+A few warm-up exercises which are good for those interested in studying free spectrahedra and matrix convex sets are
+\begin{enumerate}
+\item Show every free spectrahedron is matrix convex.
+\item Show that if $K$ is a matrix convex set, then $K(n)$ is convex in the classical sense.
+\item Show that if $K$ is a matrix convex set and $K$ is nonempty, then $K$ contains matrix tuples of all sizes. In other words, show that if 
+$K$ is matrix convex and there exists a tuple $X \in K(m)$ for some integer $m$, then for any integer $n$ there exists a tuple $Y \in K(m)$. 
+\end{enumerate}
+
+A (very) brief selection of recommended articles to read for basic information on Free spectrahedra and matrix convex sets is 
+\cite{EW97,HM12,HKM13}.
+
+\subsection{Extreme points of free spectrahedra}
+
+There are several notions of an extreme point for a matrix convex set. The main types we consider are \textit{Euclidean (classical) extreme 
+points, matrix extreme points}, and \textit{free extreme points}.
+
+
+
+Suppose $\cD_A$ is a free spectrahedron. We say $X \in \cD_A (n)$ is a Euclidean extreme point of $\cD_A$ if $X$ is an extreme point of 
+$\cD_A$ in the classical sense. 
+
+A tuple  $X \in \cD_A(n)$  is a \df{matrix extreme point}
+  of $\cD_A$
+ if whenever it is represented as a proper matrix combination of the form
+\eqref{eq:SumY} with $Y^i \in \cD_A(n_i)$,
+then $n=n_i$ and for each $i$ there is a unitary $U_i$ so that  $X = U_i^T Y^i U_i$.
+
+ A tuple  $X \in \cD_A(n)$  is an \df{free extreme point}   of $\cD_A$
+ if whenever it is represented as a weakly proper matrix combination of the form \eqref{eq:SumY},  then
+  for each $j$ either $n_j \leq n$ and there is a unitary $U_j$ so that  $X = U_j^T Y^j U_j$ (and hence $n_j=n$),
+ or $n_j>n$ and there exists a $Z^j  \in \cD_A$ and a unitary $U_j$  such that $U_j^T Y^j U_j =  X\oplus Z^j$.
+ 
+ In words, a tuple $X$ is a matrix extreme point a free spectrahedron if $X$ cannot be expressed as a nontrivial matrix convex combination of 
+ elements of $\cD_A$ having size less than or equal to $X$, while a $X$ is a free extreme point if $X$ cannot be expressed as any nontrivial 
+ convex combination of elements of the free spectrahedron. 
+ 
+ We have the following relationship between extreme points of free spectrahedra.
+ \begin{theorem}
+ Let $\cD_A$ be a free spectrahedron. If $X$ is a free extreme point of $\cD_A$, then $X$ is a matrix extreme point of $\cD_A$. In addition, 
+ if $X$ is a matrix extreme point of $\cD_A$, then $X$ is Euclidean extreme point of $\cD_A$. 
+ \end{theorem}
+ 
+ A (very) brief selection of recommend articles to read for an introduction to extreme points of free spectrahedra and matrix convex sets is 
+ \cite{WW99,EHKM18,EH19}.
+ 
+It is worth mentioning that free extreme points can be seen as a finite dimensional version of the classical dilation theoretic Arveson 
+boundary. We will not discuss this perspective further; however we recommend \cite{A69,DK15,DK+} as a starting ponit for the interested 
+reader. Also see \cite{F00,F04} for discussions of matrix extreme points from this perspective.
+ 
+ We now present a list of questions related to free spectrahedra and their extreme points.
+
+\section{Are matrix extreme points equal to free extreme points in a free spectrahedron}
+\label{sec:MatExtreme}
+
+While it is known that the set of matrix extreme points can be a proper subset of the Euclidean extreme points of a free spectrahedron, there 
+are no known examples of a matrix extreme point which is not a free extreme point of a free spectrahedron.
+
+\begin{question}
+\label{question:MissingMatExtreme}
+Let $\cD_A$ be a free spectrahedron with $A$ a tuple of real symmetric matrices. Is the set of matrix extreme points of $\cD_A$ equal to the 
+set of free extreme points of $\cD_A$. 
+\end{question}
+
+For general matrix convex sets there are examples of matrix extreme points which are not free extreme points. More dramatically, there are 
+examples of matrix convex sets which are not free spectrahedra which have no free extreme points, e.g. see \cite{E18}. On the other hand, 
+\cite{WW99} shows that all (compact) matrix convex sets are spanned by matrix extreme points. It is known that all free spectrahedra are 
+spanned by free extreme points, see \cite[Theorem 1.1]{EH19}.
+
+\section{Noncommutative varieties}
+
+A small number of free spectrahedra are known to have the property that their free extreme points are determined by a noncommutative variety. 
+Defined by example, a \df{noncommutative (NC) polynomial} is a polynomial in the noncommuting indeterminates $x=(x_1,\dots,x_g)$, e.g. 
+\[
+p(x) = x_1 x_2 + 2 x_3 x_1 x_2 x_1
+\]
+is a NC polynomial. \df{Evaluation} of a NC polynomial on a $g$-tuple of matrices is defined by replacing $x_i \to X_i$, e.g. 
+\[
+p(X) = X_1 X_2 + 2 X_3 X_1 X_2 X_1. 
+\]
+A noncommutative variety is the zero set of a finite collection of NC polynomials. That is, given a finite collection $\{p_i\}_{i=1}^k$ of NC 
+polynomials an \df{noncommutative variety}\footnote{This terminology varies from paper to paper.} is a set of the form 
+\[
+\{ X \in SM (\R)^g : p_i(X) = 0 \ \mathrm{for \ all \ } i=1,\dots,k\}.
+\]
+
+\begin{question}
+Which free spectrahedra have the property that the set of free extreme points of the free spectrahedron is given by a noncommutative variety? 
+Are there examples of free spectrahedra which do not have this property.
+\end{question}
+
+The free spectrahedra known to have free extreme points determined by a noncommutative variety are
+\begin{enumerate}
+\item The free cube in $g$-variables. I.e. the free spectrahedron $\mathcal{C}^g$ defined by
+\[
+\mathcal{C}^g = \{X \in SM(\R)^g : X_i^2 \preceq I \ \mathrm{for \ all} \ i = 1,\dots, g\}.
+\]
+\item Free simplices. I.e. free spectrahedra in $g$ variables defined by a tuple of $g+1 \times g+1$ diagonal matrices.
+\item Free quadrilaterals. I.e. free spectrahedra in $2$ variables defined by a tuple of $4 \times 4$ diagonal matrices.
+\item The spin ball. I.e. the free spectrahedron with defining pencil $L_A$ where 
+\[
+A = \left(\begin{pmatrix}
+1 & 0 \\ 
+0 & -1
+\end{pmatrix},
+\begin{pmatrix}
+0 & 1 \\ 
+1 & 0
+\end{pmatrix}
+\right)
+\]
+\end{enumerate}
+
+Limited numerical evidence suggests that free spectrahedra with free extreme points determined by a noncommutative variety are rare. See 
+\cite{E+} for details.
+
+
+
+\section{Free spectrahedrops}
+
+We now give various questions related to free spectrahedrops, i.e. projections of free spectrahedra; some call these spectrahedral shadows. 
+Let $\cD_{(A,\tilde{A})}$ be a free spectrahedron with elements $(X,Y)$. That is $\cD_{(A,\tilde{A})}$ is the set of solutions to the linear 
+matrix inequality
+\[
+I+A_1 \otimes X_1 + \cdots + A_g \otimes X_g + \tilde{A}_1 \otimes \tilde{Y}_1 + \cdots \tilde{A}_{\tilde{g}} \otimes \tilde{Y}_{\tilde{g}} 
+\succeq 0. 
+\]
+We define the \df{free spectrahedrop} $P_X \cD_{(A,\tilde{A})}$ by
+\[
+P_X \cD_{(A,\tilde{A})} = \{ X \in SM(\R)^g : \mathrm{\ There \ exists\ a \ } Y \in SM(\R)^{\tilde{g}} \ \mathrm{such\ that\ } (X,Y) \in 
+\cD_{(A,\tilde{A})} \}
+\]
+See \cite{HKMjems} for details about free spectrahedrops. 
+ 
+\subsection{Extreme points of free spectrahedrops}
+
+\begin{question}
+Let $P_X \cD_{(A,\tilde{A})}$ be a free spectrahedrop which is closed under complex conjugation. Is the set of free extreme points of $P_X 
+\cD_{(A,\tilde{A})}$ nonempty? Moreover, is $P_X \cD_{(A,\tilde{A})}$ equal to the matrix convex hull of its free extreme points?
+\end{question}
+
+\cite{EHKM18} shows that the set of free extreme points of a free spectrahedron is nonempty, and \cite{EH19} shows that every free 
+spectrahedron is the matrix convex hull of its free extreme points. 
+
+\begin{question}
+Let $K$ be a free spectrahedrop, and let $\cD_{(A,\tilde{A})}$ be a free spectrahedron such that $P_X \cD_A = K$. Suppose $Y$ is a free 
+extreme point of $K$. Is there always a tuple $\tilde{Y}$ such that $(Y,\tilde{Y})$ is a free extreme point of $\cD_A$. 
+\end{question}
+
+Note: A negative answer to the above question would resolve Question \ref{question:MissingMatExtreme}. Using the fact that a matrix convex 
+set at level $n$ is spanned by its matrix extreme points at level $n$, one show that there is always a $\tilde{Y}$ such that $(Y,\tilde{Y})$ 
+is matrix extreme.
+
+\subsubsection{Drops and hulls}
+
+\begin{question}
+Characterize which free matrix convex sets are free spectrahedrops. More generally, characterize free sets which are projections of free 
+semialgebraic sets: This is one of the most basic problems in free real algebraic geometric.
+\end{question}
+
+\cite{HM12} shows that if $K$ is free semialgebraic set which is level wise convex set and has $0$ in its interior, then $K$ is a free 
+spectrahedron. It would be very interesting to have some kind of characterization of free spectrahedrops. 
+
+Before stating the next question we introduce a small amount of notation. Given a NC polynomial $p$ with $p(0)=1$ we let $\cD_p$ denote the 
+connected component around $0$ of $\{X : p (X) \succeq 0\}$. 
+
+\begin{question}
+For $p(x) = 1-x_1^2-x_2^4$ is the matrix convex hull of $\cD_p$ a free spectrahedrop. In general, for which NC polynomials $p$ is the matrix 
+convex hull of $\cD_p$ a free spectrahedrop. 
+\end{question}
+
+$\cD_p$ is often called the bent TV screen. See \cite[Section 7.3]{EHKM18} for an in depth discussion of this domain. The only known examples 
+for the above question are sets which are either convex or ``secretly" convex, see \cite{HKM16}.
+
+
+
+\section{Free polar duals}
+
+Given a matrix convex set $K \subset SM(\R)^g$, the \df{polar dual} of $K$, denoted $K^\circ$ is the set
+\[
+K^\circ = \{ Y \in SM(\R)^g : L_X (Y) \succeq 0 \mathrm{\ for\ all\ } X \in K\}. 
+\]
+
+\begin{question}
+Is there a free spectrahedron $\cD_A$ such that the polar dual of $\cD_A$ is also a free spectrahedron and such that $\cD_A$ is not a free 
+simplex. Equivalently, if $\cD_A$ is a free spectrahedron which is not a simplex, does $\cD_A$ necessarily have infinitely many (unitary 
+equivalence classes of) free extreme points.
+\end{question}
+
+\cite[Corollary 6.8]{EHKM18} and \cite[Theorem 4.7]{FNT17} independently show that the polar dual of a free simplex is again a free simplex. 
+In \cite{EHKM18} it is shown that the polar dual of a matrix convex set is a free spectrahedron if and only if the matrix convex set has 
+finitely many (unitary equivalence classes of) free extreme points. It is not known if there are free spectrahedra which are not free 
+simplices that have finitely many free extreme points. 
+
+
+\begin{thebibliography}{1}
+	\bibitem[A69]{A69} W. Arveson:
+	{\it Subalgebras of $C^*$-algebras}, Acta Math. {\bf 123} (1969) 141-224.
+		
+	
+	\bibitem[DK15]{DK15} K.R. Davidson, M. Kennedy:
+	{\it The Choquet boundary of an operator system}, Duke Math. J. {\bf 164} (2015) 2989-3004.
+	
+	\bibitem[DK+]{DK+}
+	K.R. Davidson, M. Kennedy:
+	\textit{Noncommutative Choquet Theory},
+	preprint \url{https://arxiv.org/pdf/1905.08436.pdf}.
+	
+	
+	\bibitem[EW97]{EW97} E.G. Effros, S. Winkler: {\it Matrix convexity: operator analogues of the bipolar and Hahn-Banach theorems}, J. 
+	Funct. Anal. {\bf 144} (1997) 117-152.
+	
+	\bibitem[E18]{E18} E. Evert: {\it Matrix convex sets without absolute extreme points}, Linear Algebra Appl. {\bf 537} (2018) 
+	287-301.		
+	\bibitem[E+]{E+}
+	E. Evert: {\it The Arveson boundary of a Free Quadrilateral is given by a noncommutative variety}, preprint
+		https://arxiv.org/abs/2008.13250
+	
+	\bibitem[EH19]{EH19} E. Evert, J.W. Helton: {\it Arveson extreme points span free spectrahedra},	Math. Ann. {\bf 375} (2019) 
+	629-653.
+	
+	\bibitem[EHKM18]{EHKM18}
+	E. Evert, J.W. Helton, I. Klep, S. McCullough:
+	{\it Extreme points of matrix convex sets, free spectrahedra and dilation theory},
+	J. of Geom. Anal. {\bf 28} (2018) 1373-1498.
+	
+	\bibitem[EOYH19]{EOYH19} E. Evert, M. de Oliveira, J. Yin, and J.W. Helton: {\it NCSE 1.0: An NCAlgebra for optimization over free 
+	spectrahedra}, Available online, Jan. 2019. URL:
+	https://github.com/NCAlgebra/UserNCNotebooks/tree/master/NCSpectrahedronExtreme
+	
+	\bibitem[F00]{F00} D.R. Farenick:
+	{\it Extremal matrix states on operator systems}, J. London Math. Soc. {\bf 61} (2000) 885-892.
+	
+	\bibitem[F04]{F04} D.R. Farenick:
+	{\it Pure matrix states on operator systems}, Linear Algebra Appl. {\bf 393} (2004) 149-173.
+	
+		
+	\bibitem[FNT17]{FNT17} T. Fritz, T. Netzer, A. Thom: {\it Spectrahedral Containment and Operator Systems with Finite-dimensional 
+	Realization}, SIAM J. Appl. Algebra Geom. {\bf 1} (2017) 556-574.
+	
+	
+	\bibitem[HKM13]{HKM13} J.W. Helton, I. Klep, S. McCullough: {\it The matricial relaxation of a linear matrix inequality}, Math. 
+	Program. {\bf 138} (2013) 401-445.
+	
+	\bibitem[HKM16]{HKM16}
+	J.W. Helton, I. Klep, S. McCullough:
+	{\it Matrix convex hulls of free semialgebraic sets}, Trans. Amer. Math. Soc. {\bf 368} (2016) 3105--3139.
+	
+	
+	\bibitem[HKM17]{HKMjems}
+	J.W. Helton, I. Klep, S. McCullough:
+	{\it The tracial Hahn-Banach theorem, polar duals, matrix convex sets, and projections of free spectrahedra}, J. Eur. Math. Soc. {\bf 6} 
+	(2017) 1845--1897.
+	
+	
+	\bibitem[HM12]{HM12}
+	J.W. Helton, S. McCullough: {\it Every free basic convex semi-algebraic set has an LMI representation}, Ann. of Math. (2) {\bf 176} 
+	(2012) 979-1013.
+	
+	
+	\bibitem[WW99]{WW99}
+	C. Webster and S. Winkler:
+	{\it The Krein-Milman Theorem in Operator Convexity},  Trans Amer. Math. Soc. {\bf 351} (1999) 307-322.
+
+\end{thebibliography}

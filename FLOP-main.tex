@@ -31,7 +31,7 @@
 \begin{center}
 	\textbf{\huge{FLOP -- Free List of Open Problems}}
 	
-	\huge{\today}
+%	\huge{\today}
 \end{center}
 \tableofcontents
 
@@ -51,9 +51,10 @@
 
 
 \chapter{Algebraic Problems}
+\input{FLOP-Algebraic_Problems}
 
-\section{Algebraic Notation}
-\input{FLOP-Notation}
+
+
 
 
 
@@ -61,141 +62,60 @@
 %############################################################################
 %############################################################################
 
-
-\section{Factoring Invertible Matrices over $\C\fralg{x}\otimes \C\fralg{y}$}
-	\label{sec:Elem_Mats}
-
-\input{FLOP-Suslin}
-
-\bigskip
-
-
+%					CONVEXITY CHAPTER
 
 %############################################################################
 %############################################################################
 %############################################################################
-
-
-\section{Free L{\"u}roth Theorem}
-	\label{sec:Luroth}
-\input{FLOP-Free_Luroth}
-
-
-\bigskip
-
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-
-
-\section{Free Bertini Theorem - \textit{SOLVED!}}
-	\label{sec:FreeBertini}
-	
-\input{FLOP-Free_Bertini}
-
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-
-\section{Rational Bertini Theorem}
-	\label{sec:RatBertini}
-	
-\input{FLOP-Rat_Bertini}
-
-
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-
-\section{Jacobian Tame}
-	\label{sec:Jac Tame}
-
-\input{FLOP-Jacobian_Tame}
-
-\bigskip
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-\section{Tensor Product of Free Skew Fields}
-	\label{sec:TPFSF}
-
-\input{FLOP-Tensor_Product}
-
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-
-\bigskip
-
-\section{Rational Automorphisms}
-	\label{sec:RatAuts}
-
-\input{FLOP-Rational_Auts}
-
-
-%############################################################################
-%############################################################################
-%############################################################################
-
-
-
-
-\bigskip
-
-\section{Rational Derivatives - \textit{SOLVED!}}
-	\label{sec:RatDeriv}
-	
-\input{FLOP-Rat_Deriv}
-
-
-
-
-
-
-
-
-\section{Artin approximation theorem}
-	\label{sec:ArtinApprox}
-	
-\input{FLOP-Artin_Approx}
-
-
-\vspace{1em}
-
-
-Max pencil kernels and Makar-Limanov
-
-Nc Noether Problem.
-
-Artin-Schreier
-
-
 
 \chapter{Convexity Problems}
 
-\begin{itemize}
-\item What sets spectradrops apart from general matrix convex sets?
+\input{FLOP-Convexity_Problems}
 
-\item Positivstellensatz for spectradrops
+%\begin{itemize}
+%\item What sets spectradrops apart from general matrix convex sets?
+%
+%\item Positivstellensatz for spectradrops
+%
+%\item Including a drop into the matrix cube, or other spectrahedron. A variation
+%of asking about approximating above by a specrahedron.
+%
+%\end{itemize}
 
-\item Including a drop into the matrix cube, or other spectrahedron. A variation
-of asking about approximating above by a specrahedron.
 
-\end{itemize}
 
-\chapter{Geometry}
 
-Polynomial automorphisms between free loci.
+%############################################################################
+%############################################################################
+%############################################################################
+
+%					GEOMETRY CHAPTER
+
+%############################################################################
+%############################################################################
+%############################################################################
+
+\chapter{Geometric Problems}
+
+\input{FLOP-Geometric_Problems}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \chapter{Analysis}
@@ -212,56 +132,33 @@ Polynomial automorphisms between free loci.
 \end{itemize}
 
 
+\section{What functions are bounded on $B_{\delta}$'s?}
+
+Suppose $\delta$ is an $I\times J$ matrix of free polynomials.
+We define
+\[
+	B_\delta = \set{X\in M(\C)^\ttg \, :\, \norm{\delta(X)}<1}.
+\]
+In some cases, $B_\delta$ is empty at each level: $\norm{1 - XY + YX}\geq 1$ for all matrix evaluations.
+However, $B_{\delta/r}$ will be nonempty for some $r>0$.
+
+\begin{problem}
+	Suppose $\delta$ is an $I\times J$ matrix of free polynomials and $q$ is a free map.
+	When is $q$ bounded on $B_\delta$? If $q$ is a free polynomial, when is $q$ bounded on $B_{\delta/r}$ for all $r>0$?
+\end{problem}
+
+Another related problem is the following.
+
+\begin{problem}
+	Suppose $\delta$ is an $I\times J$ matrix of free polynomials.\
+	If there exists $\ep>0$ such that $\delta$ is injective on $B_{\delta/1+\ep}$, then is $B_\delta$ bounded?
+\end{problem}
+
+The above problem is false if we do not include the $1+\ep$. Let $\delta = (x, y(1-x))$.
+If $\norm{\delta(X,Y)} = \norm{(X,Y(I-X))}<1$ then certainly $\norm{X}<1$ so $\delta$ is injective on $B_\delta$.
+However, $B_\delta$ is not bounded.
 
 
-
-
-
-\begin{thebibliography}{6}
-
-\bibitem[Coh06]{Cohn06}
-P.M. Cohn.
-\newblock {\em Free Ideal Ring and Localizations in General Rings}.
-\newblock Cambridge University Press, 2006.
-
-
-\bibitem[PW95]{PW95}
-H.J. Park and C.~Woodburn.
-\newblock An algorithmic proof of {S}uslin's stability theorem for polynomial
-  rings.
-\newblock {\em Journal of Algebra}, 178(1):277 -- 298, 1995.
-
-\bibitem[Umi07]{U07}
-U.~U. Umirbaev.
-\newblock The {A}nick automorphism of free associative algebras.
-\newblock {\em J. Reine Angew. Math.}, 605:165--178, 2007.
-
-
-\bibitem[Sch85]{Sch85}
-Schofield, A. H.
-\newblock Representations of rings over skew fields.
-\newblock {\em London Mathematical Society Lecture Note Series}, 1985.
-
-
-\bibitem[Swe70]{Swe70}
-Moss~Eisenberg Sweedler.
-\newblock A units theorem applied to {H}opf algebras and {A}mitsur cohomology.
-\newblock {\em American Journal of Mathematics}, 92(1):259--271, 1970.
-
-
-
-\bibitem[Vol18]{Vol18}
-Jurij Vol{\v c}i{\v c}.
-\newblock Matrix coefficient realization theory of noncommutative rational functions.
-\newblock {\em Journal of Algebra}, 499: 397 - 437, 2018.
-
-\bibitem[Vol19]{Vol19}
-Jurij Vol{\v c}i{\v c}.
-\newblock Free Bertini's Theorem and applications.
-\newblock \url{https://arxiv.org/pdf/1908.08948.pdf}.
-
-
-\end{thebibliography}
 
 
 
