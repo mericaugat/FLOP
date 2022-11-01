@@ -1,0 +1,443 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ENVIRONMENTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{theorem}{Theorem}[subsection]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{question}{Question}
+\newtheorem{claim}{Claim}%[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{guess}[theorem]{Guess}
+%\newnumbered{conjecture}{Conjecture}%[theorem]
+\newtheorem{remark}[theorem]{Remark}
+%\newnumbered{example}[theorem]{Example}
+%\theoremstyle{remark}
+%\newtheorem{rem}[theorem]{Remark}
+%\theoremstyle{remark}
+%\newtheorem{remark}[theorem]{Remark}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+%\theoremstyle{definition}
+%\newnumbered{examplex}{Example}[theorem]
+%\newenvironment{example}
+%  {\pushQED{\qed}\renewcommand{\qedsymbol}{$\Diamond$}\examplex}
+%  {\popQED\endexamplex}
+%%\theoremstyle{definition}
+%\newnumbered{remarkx}{Remark}[theorem]
+%\newenvironment{remark}
+%{\pushQED{\qed}\renewcommand{\qedsymbol}{$\Diamond$}\remarkx}
+%{\popQED\endremarkx}
+
+%\newtheorem*{rem*}{Remark}
+%\newtheorem*{theorem*}{Theorem}
+%\newtheorem*{claim*}{Claim}
+%\newtheorem*{proposition*}{Proposition}
+%\newtheorem*{definition*}{Definition}
+%\newtheorem*{lemma*}{Lemma}
+\newtheorem{fact*}{Fact}
+%\newtheorem*{question*}{Question}
+\newtheorem{note}[theorem]{Note}
+
+\newtheorem{thmx}{Theorem}
+\renewcommand{\thethmx}{\Alph{thmx}} % "letter-numbered" theorems
+
+\newcounter{tmp}
+\newcounter{letter}
+
+
+% MATH -------------------------------------------------------------------
+\DeclareMathOperator{\RE}{Re}
+\DeclareMathOperator{\IM}{Im}
+\DeclareMathOperator{\intr}{int}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator\re{\mathrm {Re~}}
+\DeclareMathOperator\im{\mathrm {Im~}}
+\DeclareMathOperator{\rg}{range}
+\newcommand{\NP}[1]{\mathrm{NP}(#1)}
+\newcommand{\ANP}[1]{\mathrm{ANP}(#1)}
+\newcommand{\finv}[1]{{#1}^{\bm{\dagger}/2}}
+\newcommand{\alg}{\mathrm{alg}}
+\DeclareMathOperator\vecc{{\bf vec}}
+\DeclareMathOperator\verr{{\bf ver}}
+\DeclareMathOperator\id{{id}}
+%\newcommand\half{\tfrac{1}{2}}
+\newcommand\half{1\hspace{-0.1em}/\hspace{-0.08em}2}
+\newcommand{\eps}{\varepsilon}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	MATHCAL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\vecspace}{\mathcal{V}}
+\newcommand{\J}{\mathcal{J}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\Polar}{\mathcal{P}_{\s}}
+\newcommand{\Poly}{\mathcal{P}(E)}
+\newcommand{\Lop}{\mathcal{L}}
+\newcommand\RR{\mathcal{R}}
+\newcommand\BH{B(\mathcal{H})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	MATHBB
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\Field}{\mathbb{F}}
+\newcommand{\bbG}{\mathbbm{G}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\RPlus}{\Real^{+}}
+
+
+
+\newcommand{\bba}{\mathbbm{a}}
+\newcommand{\bbd}{\mathbbm{d}}
+\renewcommand{\k}{\mathbbm{k}}
+\newcommand{\bbn}{\mathbbm{n}}
+\newcommand{\bbp}{\mathbbm{p}}
+\newcommand{\bbq}{\reflectbox{$\mathbbm{p}$}}
+\newcommand{\bbr}{\mathbbm{r}}
+\newcommand{\bbs}{\mathbbm{s}}
+\newcommand{\bbu}{\mathbbm{u}}
+\newcommand{\bbv}{\mathbbm{v}}
+\newcommand{\bbw}{\mathbbm{w}}
+\newcommand{\bbx}{\mathbbm{x}}
+\newcommand{\bby}{\mathbbm{y}}
+\newcommand{\bbz}{\mathbbm{z}}
+
+
+
+\newcommand{\ew}{\mathbbm{1}}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	FRAKTURE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\mfq{\mathfrak{q}}
+\newcommand\mfG{\mathfrak{G}}
+\newcommand\Choi{\mathfrak{C}}
+\newcommand\mfa{\mathfrak{a}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	BOLD
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\x}{\bm{x}}
+\newcommand{\y}{\bm{y}}
+\newcommand{\z}{\bm{z}}
+\newcommand{\h}{\bm{h}}
+\newcommand{\w}{\bm{w}}
+\renewcommand{\u}{\bm{u}}
+\newcommand{\s}{\bm{s}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	UPRIGHT TEXT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\GM}{\textup{GM}}
+\newcommand{\UD}{\textup{UD}}
+\newcommand{\Aut}[1]{\textup{Aut}(#1)}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	GREEK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\vp}{\varphi}
+\newcommand{\ph}{\varphi}
+\newcommand\al{\alpha}
+\newcommand\ga{\gamma}
+\newcommand\de{\delta}
+\newcommand\ep{\varepsilon}
+\newcommand\La{\Lambda}
+\newcommand\la{\lambda}
+\newcommand\up{\upsilon}
+\newcommand\si{\sigma}
+
+
+
+
+\newcommand{\cc}[1]{\overline{#1}}
+\newcommand{\abs}[1]{{\left\vert#1\right\vert}}
+\newcommand{\set}[1]{{\left\{#1\right\}}}
+\newcommand{\seq}[1]{{\left<#1\right>}}
+\newcommand{\norm}[1]{{\left\Vert#1\right\Vert}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\trp}{\operatorname{Trp}}
+\newcommand{\ran}[1]{\operatorname{ran}#1}
+\newcommand{\spn}[1]{\operatorname{span}\left\{ #1 \right\}}
+\newcommand{\nt}{\stackrel{\mathrm {nt}}{\to}}
+\newcommand{\pnt}{\xrightarrow{pnt}}
+\newcommand{\vr}[1]{\bold{#1}}
+\newcommand{\uvr}[1]{\hat{\bold{#1}}}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\wrd}[1]{\left\langle #1\right\rangle}
+\newcommand{\ad}{^\ast}
+\newcommand{\inv}{^{-1}}
+\newcommand{\pinv}{^{\dagger}}
+\newcommand{\adinv}{^{\ast -1}}
+\newcommand{\invad}{^{-1 \ast}}
+
+\newcommand{\til}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+\newcommand{\res}[1]{\big\vert_{#1}}
+
+
+
+
+
+\newcommand\Htau{\mathbb{H}(\tau)}
+
+
+
+
+
+
+\newcommand\ds{\displaystyle}
+
+\newcommand{\df}[1]{{\it{#1}}{\index{#1}}}
+\newcommand\ii{\mathrm i}
+
+
+
+
+
+
+
+\newcommand\blue{\color{blue}}
+\newcommand\black{\color{black}}
+\newcommand\red{\color{red}}
+
+\newcommand\nn{\nonumber}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	MATRICES, ARRAYS, PIECEWISE AND ALIGNS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\bbm}{\left[ \begin{smallmatrix}}
+\newcommand{\ebm}{\end{smallmatrix} \right]}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bal}{\begin{align*}}
+\newcommand{\eal}{\end{align*}}
+
+\newcommand{\kp}[2]
+{
+	\begin{matrix}
+		#1 \\
+		#2
+	\end{matrix}
+}
+
+
+\newcommand{\vectwo}[2]
+{
+   \begin{pmatrix} #1 \\ #2 \end{pmatrix}
+}
+\newcommand{\vecthree}[3]
+{
+   \begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}
+}
+
+\newcommand{\twopartdef}[4]
+{
+	\left\{
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+\newcommand{\threepartdef}[6]
+{
+	\left\{
+		\begin{array}{lll}
+			#1 & \mbox{if } #2 \\
+			#3 & \mbox{if } #4 \\
+			#5 & \mbox{if } #6
+		\end{array}
+	\right.
+}
+\newcommand{\tensor}[2]{\text{ }{\begin{smallmatrix} #1 \\ \otimes\\ #2\end{smallmatrix}}\text{  }}
+\newcommand{\flattensor}[2]{#1 \otimes #2}
+\newcommand{\bigtensor}[2]{\text{ }\begin{matrix} #1 \\{\otimes}\\ #2\end{matrix}\text{  }}
+\newcommand\smallmath[2]{#1{\raisebox{\dimexpr \fontdimen 22 \textfont 2
+      - \fontdimen 22 \scriptfont 2 \relax}{$\scriptstyle #2$}}}
+\newcommand{\sot}{\!\smallmath\mathbin\otimes\!}
+
+
+\numberwithin{equation}{section}
+\newcommand\noin{\noindent}
+
+
+\newlength{\Mheight}
+\newlength{\cwidth}
+\newcommand{\mc}{\settoheight{\Mheight}{M}\settowidth{\cwidth}{c}M\parbox[b][\Mheight][t]{\cwidth}{c}}
+\newcommand{\foot}[1]{\footnote{#1}}
+\newcommand{\dfn}[1]{{\bf #1}\index{#1}}
+\newcommand{\tir}[1]{\tensor{#1}{I}}
+\newcommand{\tidr}[1]{\tensor{#1}{\mathrm{id}}}
+
+\newcommand\psub{\mathrel{%
+  \ooalign{\raise0.2ex\hbox{$\subset$}\cr\hidewidth\raise-0.8ex\hbox{\box{0.9}{$\sim$}}\hidewidth\cr}}}
+\newcommand\piso{\mathrel{%
+  \ooalign{\raise0.2ex\hbox{$=$}\cr\hidewidth\raise-0.5ex\hbox{\scalebox{0.9}{$\sim$}}\hidewidth\cr}}}
+
+
+
+
+\newcommand*{\defeq}{\mathrel{\vcenter{\baselineskip0.6ex \lineskiplimit0pt
+                     \hbox{\small.}\hbox{\small.}}}%
+                     =}
+
+
+\makeatletter
+\def\moverlay{\mathpalette\mov@rlay}
+\def\mov@rlay#1#2{\leavevmode\vtop{
+                \baselineskip\z@skip \lineskiplimit-\maxdimen
+                \ialign{\hfil$#1##$\hfil\cr#2\crcr}}}
+\makeatother
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%		\llangle and \rrangle
+\makeatletter
+\DeclareFontFamily{OMX}{MnSymbolE}{}
+\DeclareSymbolFont{MnLargeSymbols}{OMX}{MnSymbolE}{m}{n}
+\SetSymbolFont{MnLargeSymbols}{bold}{OMX}{MnSymbolE}{b}{n}
+\DeclareFontShape{OMX}{MnSymbolE}{m}{n}{
+    <-6>  MnSymbolE5
+   <6-7>  MnSymbolE6
+   <7-8>  MnSymbolE7
+   <8-9>  MnSymbolE8
+   <9-10> MnSymbolE9
+  <10-12> MnSymbolE10
+  <12->   MnSymbolE12
+}{}
+\DeclareFontShape{OMX}{MnSymbolE}{b}{n}{
+    <-6>  MnSymbolE-Bold5
+   <6-7>  MnSymbolE-Bold6
+   <7-8>  MnSymbolE-Bold7
+   <8-9>  MnSymbolE-Bold8
+   <9-10> MnSymbolE-Bold9
+  <10-12> MnSymbolE-Bold10
+  <12->   MnSymbolE-Bold12
+}{}
+
+\let\llangle\@undefined
+\let\rrangle\@undefined
+\DeclareMathDelimiter{\llangle}{\mathopen}%
+                     {MnLargeSymbols}{'164}{MnLargeSymbols}{'164}
+\DeclareMathDelimiter{\rrangle}{\mathclose}%
+                     {MnLargeSymbols}{'171}{MnLargeSymbols}{'171}
+\makeatother
+
+%		\llangle and \rrangle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand*{\mpsymbol}{
+        \!\protect\raisebox{0.534ex}{\protect\scalebox{.28}{
+                        \begin{tikzpicture}[line width=0.6ex]
+                        \draw[arrows={<->}]
+                        (0,0) -- (5ex,0);
+                        \end{tikzpicture}
+                }}\!
+        }
+
+\newcommand{\lra}{\mpsymbol}
+\renewcommand{\mp}{\textrm{mp}}
+
+\newcommand{\fps}[1]{\llangle #1 \rrangle}
+\newcommand{\fpsx}{\fps{\bbx}}
+\newcommand{\fralg}[1]{\langle #1 \rangle}
+\newcommand{\fax}{\fralg{\bbx}}
+
+
+\newcommand{\plangle}{\moverlay{(\cr<}}
+\newcommand{\prangle}{\moverlay{)\cr>}}
+
+\newcommand{\flangle}{\plangle\hphantom{_o}\mathllap{\plangle}}
+\newcommand{\frangle}{\mathrlap{\prangle}\hphantom{_o}\prangle}
+
+\newcommand{\skf}[1]{\plangle #1 \prangle}
+\newcommand{\fls}[1]{\flangle #1 \frangle}
+
+
+%\newcommand{\hypj}[1]{J^{\text{hyp}}_{#1}}
+\newcommand{\hypj}[1]{J^{\mathbbm{H}}_{#1}}
+%\newcommand{\hypj}[1]{\moverlay{\triangle \cr \raisebox{0.025ex}{\scaleobj{0.775}{\times}}   }_{#1}}
+%\newcommand{\hypmat}{\moverlay{\triangle \cr \raisebox{0.025ex}{\scaleobj{0.775}{\times}}   }}
+
+%\makeatletter
+%\def\moverlay{\mathpalette\mov@rlay}
+%\def\mov@rlay#1#2{\leavevmode\vtop{
+%                \baselineskip\z@skip \lineskiplimit-\maxdimen
+%                \ialign{\hfil$#1##$\hfil\cr#2\crcr}}}
+%\makeatother
+
+
+
+
+
+\newcommand{\meric}{\red \sc}
+
+
+
+
+%\begin Shrug
+\newcommand{\shrug}[1][]{%
+\begin{tikzpicture}[baseline,x=0.8\ht\strutbox,y=0.8\ht\strutbox,line width=0.125ex,#1]
+\def\arm{(-2.5,0.95) to (-2,0.95) (-1.9,1) to (-1.5,0) (-1.35,0) to (-0.8,0)};
+\draw \arm;
+\draw[xscale=-1] \arm;
+\def\headpart{(0.6,0) arc[start angle=-40, end angle=40,x radius=0.6,y radius=0.8]};
+\draw \headpart;
+\draw[xscale=-1] \headpart;
+\def\eye{(-0.075,0.15) .. controls (0.02,0) .. (0.075,-0.15)};
+\draw[shift={(-0.3,0.8)}] \eye;
+\draw[shift={(0,0.85)}] \eye;
+% draw mouth
+\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95); 
+\end{tikzpicture}}
+%\end shrug
+
+
+

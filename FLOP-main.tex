@@ -147,7 +147,7 @@ However, $B_{\delta/r}$ will be nonempty for some $r>0$.
 	When is $q$ bounded on $B_\delta$? If $q$ is a free polynomial, when is $q$ bounded on $B_{\delta/r}$ for all $r>0$?
 \end{problem}
 
-Another related problem is the following.
+Another related problem is the following {\color{red} This problem has a counterexample, explained below!}
 
 \begin{problem}
 	Suppose $\delta$ is an $I\times J$ matrix of free polynomials.\
@@ -157,6 +157,10 @@ Another related problem is the following.
 The above problem is false if we do not include the $1+\ep$. Let $\delta = (x, y(1-x))$.
 If $\norm{\delta(X,Y)} = \norm{(X,Y(I-X))}<1$ then certainly $\norm{X}<1$ so $\delta$ is injective on $B_\delta$.
 However, $B_\delta$ is not bounded.
+
+In fact, if $\delta(x,y) = \frac{1}{4}(x, xy, yx, y - yxy)$, then $\delta$ is globally injective.
+However, $\delta(t^{-1}, t) = \frac{1}{4}(t^{-1}, 1, 1, 0)$ has norm less than $1$ when $t>1$, implying that $B_\delta$ is unbounded even on 
+the scalars!
 
 
 
